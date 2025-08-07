@@ -1,0 +1,108 @@
+.footer {
+    background-color: #0D1B2A;
+    color: #1B9AAA;
+    padding: 20px; /* Padding reducido */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centrar verticalmente */
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Centrar horizontalmente */
+    width: 100%;
+    max-width: 100%; /* No límite el ancho máximo */
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: left; /* Alinear a la izquierda */
+    margin-right: 20px; /* Espacio a la derecha */
+    margin-bottom: 20px; /* Espacio debajo de la información de contacto */
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Espacio a la derecha del ícono */
+}
+
+.social-icons-footer {
+    display: flex;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    gap: 50px; /* Asegura un espacio uniforme entre los íconos */
+}
+
+.social-icon-footer {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s ease;
+    margin: 0; /* Elimina cualquier margen previo */
+}
+
+.social-icon-footer:hover {
+    filter: brightness(0) invert(1);
+}
+
+.social-icon-footer:last-child {
+    margin-right: 0; /* Eliminar margen del último ícono */
+}
+
+.copyright {
+    text-align: right; /* Alinear a la derecha */
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info,
+    .social-icons-footer,
+    .copyright {
+        margin-bottom: 20px;
+        text-align: center; /* Alinear el texto al centro en dispositivos móviles */
+    }
+
+    .contact-info h3 {
+        text-align: center; /* Alinear el título al centro */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .social-icon-footer {
+        width: 32px;
+        height: 32px;
+    }
+}

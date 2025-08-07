@@ -1,0 +1,147 @@
+/* ===== ESTILOS GENERALES ===== */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.66vw;
+    width: 100%;
+}
+
+.derecha,
+.izquierda {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.derecha {
+    padding: 0.25rem;
+}
+
+.derecha img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6.66vw 0 0 6.66vw;
+    border-left: 0.41vw solid #1B9AAA;
+    border-bottom: 0.41vw solid #1B9AAA;
+}
+
+.izquierda {
+    flex-direction: column;
+    padding: 1.25rem;
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+.izquierda h1 {
+    text-align: center;
+    font-size: 5vw;
+    color: #0F2948;
+    margin-bottom: 1.25rem; /* Ajusté el espacio debajo */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.izquierda h2 {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 600;
+    color: #1B9AAA;
+    margin-bottom: 1.25rem; /* Ajusté el espacio debajo */
+    font-family: 'Inter', sans-serif;
+}
+
+.izquierda p {
+    text-align: center;
+    color: #333;
+    font-size: 1.4vw;
+    line-height: 1.6;
+    margin-bottom: 2rem; /* Ajusté el espacio debajo */
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== BOTÓN PARA SERVICIOS ===== */
+.btn-servicios {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #1B9AAA; /* Color celeste */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem; /* Espacio arriba */
+    margin-bottom: 3rem
+}
+
+.btn-servicios:hover {
+    background-color: #0F2948; /* Color al pasar el ratón */
+}
+
+.btn-servicios svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ===== BOTÓN PARA BLOG ===== */
+.btn-blog {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #1B9AAA; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem; /* Espacio arriba */
+}
+
+.btn-blog:hover {
+    background-color: #0F2948; /* Toner azul al pasar el ratón */
+}
+
+.btn-blog svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .izquierda {
+        align-items: center;
+    }
+
+    .derecha img {
+        border-radius: 2.66vw;
+        border: 0.41vw solid #1B9AAA;
+    }
+}
+
+@media (max-width: 480px) {
+    .izquierda h1 {
+        font-size: 3rem;
+    }
+
+    .izquierda h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .izquierda p {
+        font-size: 1rem;
+    }
+}

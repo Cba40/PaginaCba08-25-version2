@@ -1,0 +1,145 @@
+/* Estilos Generales */
+.header {
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0D1B2A;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    color: #0D1B2A;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #1B9AAA;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #0D1B2A;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.social-icons-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon-header {
+    width: 34px;
+    height: 34px;
+    transition: filter 0.3s ease;
+}
+
+.social-icon-header:hover {
+    filter: brightness(0) invert(1);
+}
+
+/* Animaciones */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Clase para el menú activo */
+.nav-links.nav-active {
+    display: flex;
+}
+
+/* Clase para el menú hamburguesa activo */
+.hamburger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.toggle .line2 {
+    opacity: 0;
+}
+
+.hamburger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: #FFFFFF;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .nav-item {
+        font-size: 1.2rem;
+    }
+
+    .social-icons-header {
+        display: none;
+    }
+}

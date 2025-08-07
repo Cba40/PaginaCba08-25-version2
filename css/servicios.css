@@ -1,0 +1,108 @@
+/* Contenedor principal de servicios */
+.servicios {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+/* Grid de tarjetas de servicio */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjeta de servicio */
+.servicio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.servicio img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.servicio h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.servicio p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.boton {
+  margin-top: auto;
+  padding: 10px 15px;
+  background-color: #187b8b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #125e69;
+}
+
+/* MEDIA QUERIES RESPONSIVE */
+
+/* Tablets y menores */
+@media (max-width: 768px) {
+  .servicios h2 {
+    font-size: 2rem;
+  }
+
+  .servicio {
+    box-shadow: 1.5px 1.5px 3px #fad201;
+  }
+
+  .servicio p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  .servicios h2 {
+    font-size: 1.5rem;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .servicio p {
+    font-size: 0.85rem;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
