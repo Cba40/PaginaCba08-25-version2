@@ -1,108 +1,306 @@
+/* CSS FOOTER MEJORADO */
 .footer {
-    background-color: #0D1B2A;
-    color: #1B9AAA;
-    padding: 20px; /* Padding reducido */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Centrar verticalmente */
+    background: linear-gradient(135deg, #0D1B2A 0%, #1a2832 100%);
+    color: #e2e8f0;
+    padding: 60px 20px 20px;
     font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1B9AAA, #0F2948, #1B9AAA);
 }
 
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Centrar horizontalmente */
-    width: 100%;
-    max-width: 100%; /* No límite el ancho máximo */
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-.contact-info {
-    text-align: left; /* Alinear a la izquierda */
-    margin-right: 20px; /* Espacio a la derecha */
-    margin-bottom: 20px; /* Espacio debajo de la información de contacto */
-}
-
-.contact-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    font-size: 1rem;
-    margin: 5px 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px; /* Espacio a la derecha del ícono */
+/* Sección principal */
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Marca/Logo */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(27, 154, 170, 0.3);
+}
+
+.footer-brand h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1B9AAA;
+    margin: 0;
+}
+
+.footer-brand p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* Enlaces y servicios */
+.footer-links,
+.footer-services {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links h4,
+.footer-services h4,
+.contact-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1B9AAA;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+.footer-links h4::after,
+.footer-services h4::after,
+.contact-info h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #1B9AAA;
+    border-radius: 1px;
+}
+
+.footer-links ul,
+.footer-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links li,
+.footer-services li {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #1B9AAA;
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+/* Información de contacto mejorada */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.contact-item .icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(65%) sepia(25%) saturate(558%) hue-rotate(160deg) brightness(95%) contrast(90%);
+    margin-top: 2px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-details span {
+    font-size: 0.85rem;
+}
+
+/* Sección de redes sociales */
+.footer-social-section {
+    background: rgba(27, 154, 170, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(27, 154, 170, 0.2);
+}
+
+.social-cta h4 {
+    font-size: 1.3rem;
+    color: #1B9AAA;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.social-cta p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin: 0;
+    max-width: 400px;
+    line-height: 1.5;
 }
 
 .social-icons-footer {
     display: flex;
-    align-self: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
-    gap: 50px; /* Asegura un espacio uniforme entre los íconos */
+    gap: 20px;
 }
 
 .social-icon-footer {
-    width: 40px;
-    height: 40px;
-    transition: filter 0.3s ease;
-    margin: 0; /* Elimina cualquier margen previo */
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .social-icon-footer:hover {
-    filter: brightness(0) invert(1);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(27, 154, 170, 0.4);
+    background: rgba(27, 154, 170, 0.2);
 }
 
-.social-icon-footer:last-child {
-    margin-right: 0; /* Eliminar margen del último ícono */
+/* Separador */
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #334155, transparent);
+    margin: 20px 0;
 }
 
-.copyright {
-    text-align: right; /* Alinear a la derecha */
-    justify-content: center;
-    margin-top: 70px;
-    margin-bottom: 20px;
+/* Parte inferior */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
 }
 
-/* ===== RESPONSIVE ===== */
+.copyright p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #1B9AAA;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 768px) {
-    .footer-content {
+    .footer {
+        padding: 40px 15px 20px;
+    }
+    
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .footer-social-section {
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
+        text-align: center;
     }
-
-    .contact-info,
-    .social-icons-footer,
-    .copyright {
-        margin-bottom: 20px;
-        text-align: center; /* Alinear el texto al centro en dispositivos móviles */
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
-
-    .contact-info h3 {
-        text-align: center; /* Alinear el título al centro */
+    
+    .legal-links {
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-info h3 {
-        font-size: 1.2rem;
+    .footer-content {
+        gap: 25px;
     }
-
-    .contact-info p {
-        font-size: 0.9rem;
+    
+    .footer-brand h3 {
+        font-size: 1.5rem;
     }
-
+    
+    .social-icons-footer {
+        gap: 15px;
+    }
+    
     .social-icon-footer {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .legal-links {
+        flex-direction: column;
+        gap: 10px;
     }
 }

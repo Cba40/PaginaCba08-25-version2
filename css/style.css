@@ -163,11 +163,20 @@ a:hover {
     align-items: center;
     width: 250px;
     border: 2px solid #1B9AAA;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(27, 154, 170, 0.15);
     background-color: #fff;
     text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover para tarjetas del equipo */
+.card-integrante:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(27, 154, 170, 0.3);
+    border-color: #0F2948;
 }
 
 .card-integrante img {
@@ -176,12 +185,22 @@ a:hover {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card-integrante:hover img {
+    transform: scale(1.05);
 }
 
 .info-integrante h3 {
     font-size: 1.2rem;
     color: #0F2948;
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.card-integrante:hover .info-integrante h3 {
+    color: #1B9AAA;
 }
 
 .info-integrante p {
@@ -214,26 +233,46 @@ a:hover {
 .servicio {
     background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1B9AAA;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(27, 154, 170, 0.15);
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover para servicios */
+.servicio:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(27, 154, 170, 0.3);
+    border-color: #0F2948;
 }
 
 .servicio img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.servicio:hover img {
+    transform: scale(1.05);
 }
 
 .servicio h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #0f172a;
+    transition: color 0.3s ease;
+}
+
+.servicio:hover h3 {
+    color: #1B9AAA;
 }
 
 .servicio p {
@@ -252,63 +291,175 @@ a:hover {
     display: inline-block;
     text-align: center;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .boton:hover {
     background-color: #125e69;
+    transform: translateY(-2px);
 }
 
-/* Sección Portafolio */
-.portafolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 2rem;
-    justify-items: center;
-}
-
-.portafolio-titulo {
-    grid-column: 1 / -1;
+/* Sección Portafolio - MEJORADA */
+.portfolio {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
     text-align: center;
-    font-size: 4.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    color: #660000;
 }
 
-.portafolio {
-    text-align: center;
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
     font-weight: bold;
+    color: #0f172a;
+}
+
+/* Contenedor principal del portafolio */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+}
+
+/* Fila contenedora */
+.portfolio-row {
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Configuración específica para cada fila */
+.fila-1, .fila-3 {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 100%;
+}
+
+.fila-2 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Tarjeta base del portafolio */
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1B9AAA;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(27, 154, 170, 0.15);
+    background-color: #fff;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: fit-content;
+    min-height: 380px;
+}
+
+/* Efecto hover para las tarjetas */
+.portfolio-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(27, 154, 170, 0.3);
+    border-color: #0F2948;
+}
+
+/* Contenedor de imagen mejorado */
+.image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f9fa;
 }
 
-.portafolio img {
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
+/* Imágenes del portafolio */
+.portfolio-card img {
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
-    display: block;
-    box-shadow: 3px 3px 5px black;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.subtitulos {
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Configuración específica para tarjetas horizontales */
+.portfolio-card.horizontal .image-wrapper {
+    height: 180px;
+}
+
+.portfolio-card.horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card.horizontal {
+    min-height: 420px;
+}
+
+/* Configuración específica para tarjetas verticales */
+.portfolio-card.vertical .image-wrapper {
+    height: 200px;
+    max-width: 180px;
+    margin: 0 auto 1rem auto;
+}
+
+.portfolio-card.vertical img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card.vertical {
+    min-height: 450px;
     text-align: center;
-    margin-top: 1rem;
-    font-size: 1.2rem;
 }
 
+/* Títulos de las tarjetas */
+.portfolio-card h3 {
+    font-size: 1.3rem;
+    color: #0F2948;
+    margin: 0 0 0.8rem 0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-align: center;
+}
 
+.portfolio-card:hover h3 {
+    color: #1B9AAA;
+}
+
+/* Párrafos de las tarjetas */
+.portfolio-card p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.portfolio-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Strong dentro de párrafos */
+.portfolio-card p strong {
+    color: #0F2948;
+    font-weight: 600;
+}
 /*icono wsp flotante*/
-
 .btn-wsp {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1500;
-    background-color: #25d366;
+    background-color: #f7f8f8;
     padding: 12px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -324,8 +475,7 @@ a:hover {
     height: 32px;
 }
 
-
-/* Ajustes responsivos */
+/* Ajustes responsivos mejorados */
 @media (max-width: 768px) {
     .main-container {
         display: flex;
@@ -356,33 +506,43 @@ a:hover {
     }
 
     .servicio {
-        box-shadow: 1.5px 1.5px 3px #fad201;
+        box-shadow: 0 4px 15px rgba(27, 154, 170, 0.15);
     }
 
     .servicio p {
         font-size: 0.9rem;
     }
 
-    .portafolio-grid {
-        grid-template-columns: 1fr;
+    /* Portafolio responsive */
+    .portfolio-container {
+        gap: 30px;
     }
 
-    .portafolio-titulo {
-        font-size: clamp(0.5rem, 2.5rem, 5rem);
+    .fila-1, .fila-3 {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .portafolio img {
-        width: 15rem;
-        height: 15rem;
-        box-shadow: 1.5px 1.5px 3px black;
+    .fila-2 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        max-width: 500px;
     }
 
-    .subtitulos {
-        font-size: clamp(0.8rem, 1rem, 1.2rem);
+    .portfolio-card {
+        padding: 1.2rem;
     }
 
-   
+    .portfolio-card.horizontal .image-wrapper {
+        height: 180px;
+    }
 
+    .portfolio-card.vertical .image-wrapper {
+        height: 220px;
+    }
+
+    .home {
+        margin-top: 100px;
+    }
+}
 
 @media (max-width: 480px) {
     .izquierda h1 {
@@ -414,135 +574,44 @@ a:hover {
         width: 100%;
     }
 
-    .portafolio-titulo {
-        font-size: clamp(0.25rem, 1.75rem, 2.5rem);
+    /* Portafolio móvil */
+    .portfolio-container {
+        gap: 25px;
     }
 
-    .portafolio img {
-        width: 10rem;
-        height: 10rem;
-        box-shadow: 1px 1px 1.5px black;
+    .fila-1, .fila-3 {
+        grid-template-columns: 1fr;
     }
 
-    .subtitulos {
-        font-size: clamp(0.6rem, 0.8rem, 1rem);
+    .fila-2 {
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
-}
-}
-    
 
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .main-container {
-        display: flex;
-        flex-direction: column;
+    .portfolio-card {
         padding: 1rem;
+        margin: 0 auto;
+        max-width: 350px;
     }
 
-    .izquierda {
-        align-items: center;
+    .portfolio-card.horizontal .image-wrapper {
+        height: 160px;
     }
 
-    .derecha img {
-        border-radius: 2.66vw;
-        border: 0.41vw solid #1B9AAA;
+    .portfolio-card.vertical .image-wrapper {
+        height: 200px;
+        max-width: 180px;
     }
 
-    .equipo-nosotros {
-        flex-direction: column;
-        align-items: center;
+    .portfolio-card h3 {
+        font-size: 1.1rem;
     }
 
-    .card-integrante {
-        width: 90%;
-    }
-
-    .servicios h2 {
-        font-size: 2rem;
-    }
-
-    .servicio {
-        box-shadow: 1.5px 1.5px 3px #fad201;
-    }
-
-    .servicio p {
-        font-size: 0.9rem;
-    }
-
-    .portafolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .portafolio-titulo {
-        font-size: clamp(0.5rem, 2.5rem, 5rem);
-    }
-
-    .portafolio img {
-        width: 15rem;
-        height: 15rem;
-        box-shadow: 1.5px 1.5px 3px black;
-    }
-
-    .subtitulos {
-        font-size: clamp(0.8rem, 1rem, 1.2rem);
-    }
-
-   
-
-
-@media (max-width: 480px) {
-    .izquierda h1 {
-        font-size: 3rem;
-    }
-
-    .izquierda h2 {
-        font-size: 1.5rem;
-    }
-
-    .izquierda p {
-        font-size: 1rem;
-    }
-
-    .servicios h2 {
-        font-size: 1.5rem;
-    }
-
-    .servicios-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .servicio p {
-        font-size: 0.85rem;
-    }
-
-    .boton {
-        width: 100%;
-    }
-
-    .portafolio-titulo {
-        font-size: clamp(0.25rem, 1.75rem, 2.5rem);
-    }
-
-    .portafolio img {
-        width: 10rem;
-        height: 10rem;
-        box-shadow: 1px 1px 1.5px black;
-    }
-
-    .subtitulos {
-        font-size: clamp(0.6rem, 0.8rem, 1rem);
+    .home {
+        margin-top: 80px;
     }
 }
+
 .home {
-  margin-top: 80px; /* Altura suficiente para pantallas grandes */
+    margin-top: 80px;
 }
-
-@media (max-width: 768px) {
-  .home {
-    margin-top: 100px; /* Ajuste mayor para móviles si el header crece */
-  }
-}
-}
-    
