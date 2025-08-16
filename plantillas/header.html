@@ -1,39 +1,59 @@
+<!-- HTML HEADER MEJORADO -->
 <header class="header">
-    <div class="logo-container">
-        <a href="/index.html" class="logo-link">
-            <img src="/imagenes/logo.webp" alt="Logo CBA 4.0" class="logo">
-        </a>
-        <h1 class="logo-text">CBA 4.0</h1>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="/index.html" class="logo-link">
+                <img src="/imagenes/logo.webp" alt="Logo CBA 4.0" class="logo">
+            </a>
+            <div class="logo-text-container">
+                <h1 class="logo-text">CBA 4.0</h1>
+                <span class="logo-subtitle">Soluciones Digitales</span>
+            </div>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-item active">Inicio</a></li>
+                <li><a href="#nosotros" class="nav-item">Nosotros</a></li>
+                <li><a href="#servicios" class="nav-item">Servicios</a></li>
+                <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
+                <li><a href="https://www.cba-blog.com.ar" class="nav-item external" target="_blank" rel="noopener noreferrer">
+                    Blog
+                    <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="social-icons-header">
+                <a href="https://www.linkedin.com/company/cba-cuatropuntocero/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                    <img src="/imagenes/icons/linkedin.png" alt="LinkedIn" class="social-icon-header">
+                </a>
+                <a href="https://www.facebook.com/CBA4.0Cordoba" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                    <img src="/imagenes/icons/facebook.png" alt="Facebook" class="social-icon-header">
+                </a>
+                <a href="https://www.instagram.com/cba4.0cordoba/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                    <img src="/imagenes/icons/instagram.png" alt="Instagram" class="social-icon-header">
+                </a>
+                <a href="https://wa.me/5493525623637" target="_blank" rel="noopener" class="social-link whatsapp" aria-label="WhatsApp">
+                    <img src="/imagenes/icons/whatsapp.png" alt="WhatsApp" class="social-icon-header">
+                </a>
+            </div>
+            
+          <button class="cta-button" onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">
+    Contactar
+</button>
+        </div>
+        
+        <button class="hamburger" aria-label="Menú de navegación" aria-expanded="false">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
     </div>
-
-    <div class="hamburger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
-
-    <nav class="nav">
-        <ul class="nav-links">
-            <li><a href="#inicio" class="nav-item">Inicio</a></li>
-            <li><a href="#nosotros" class="nav-item">Nosotros</a></li>
-            <li><a href="#servicios" class="nav-item">Servicios</a></li>
-            <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
-            <li><a href="https://www.cba-blog.com.ar" class="nav-item" target="_blank" rel="noopener noreferrer">Blog</a></li>
-        </ul>
-    </nav>
-
-    <div class="social-icons-header">
-        <a href="https://www.linkedin.com/company/cba-cuatropuntocero/" target="_blank" rel="noopener">
-            <img src="/imagenes/icons/linkedin.png" alt="LinkedIn" class="social-icon-header">
-        </a>
-        <a href="https://www.facebook.com/CBA4.0Cordoba" target="_blank" rel="noopener">
-            <img src="/imagenes/icons/facebook.png" alt="Facebook" class="social-icon-header">
-        </a>
-        <a href="https://www.instagram.com/cba4.0cordoba/" target="_blank" rel="noopener">
-            <img src="/imagenes/icons/instagram.png" alt="Instagram" class="social-icon-header">
-        </a>
-        <a href="https://wa.me/5493525623637" target="_blank" rel="noopener">
-            <img src="/imagenes/icons/whatsapp.png" alt="WhatsApp" class="social-icon-header">
-        </a>
-    </div>
+    
+    <!-- Overlay para móvil -->
+    <div class="mobile-overlay"></div>
 </header>
