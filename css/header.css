@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 12px rgba(0,123,255,0.4);
   height: 70px;
 }
 
@@ -24,7 +24,7 @@ html, body {
   min-height: 100vh;
   font-family: 'Poppins', 'Open Sans', sans-serif;
   background-color: #f9f9f9;
-  color: #333;
+  color: #0F2948;
   scroll-behavior: smooth;
 }
 
@@ -64,13 +64,15 @@ html, body {
 }
 
 .nav-item {
-  text-decoration: none;
-  color: #333;
+  color: #0F2948;
   font-weight: 500;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .nav-item:hover {
+  text-decoration: none;
   color: #007bff;
+  font-weight: 700;
 }
 
 /* Hamburguesa oculta en escritorio */

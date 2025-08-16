@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   font-family: 'Poppins', 'Open Sans', sans-serif;
   background-color: #f9f9f9;
-  color: #333;
+  color: #000000;
   margin: 0;
   padding: 0;
 }
@@ -23,10 +23,6 @@ body {
 a {
     color: #1B9AAA;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Sección Inicio */
@@ -38,58 +34,49 @@ a:hover {
     padding: 2rem;
 }
 
-.derecha,
-.izquierda {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
 .derecha {
     padding: 0.25rem;
 }
 
 .derecha img {
     width: 100%;
-    height: auto;
     object-fit: cover;
-    border-radius: 6.66vw 0 0 6.66vw;
-    border-left: 0.41vw solid #1B9AAA;
-    border-bottom: 0.41vw solid #1B9AAA;
+    margin-bottom: 2rem;
 }
 
 .izquierda {
+    display: flex;
     flex-direction: column;
-    padding: 1.25rem;
-    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
 }
 
 .izquierda h1 {
-    text-align: center;
     font-size: 5vw;
     color: #0F2948;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.25rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
 .izquierda h2 {
-    text-align: center;
     font-size: 3vw;
     font-weight: 600;
     color: #1B9AAA;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     font-family: 'Inter', sans-serif;
 }
 
 .izquierda p {
-    text-align: center;
-    color: #333;
     font-size: 1.4vw;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 0.25rem;
     font-family: 'Inter', sans-serif;
+}
+
+.parrafoSecundario {
+    text-align: start;
 }
 
 .btn-servicios, .btn-blog {
@@ -105,7 +92,7 @@ a:hover {
     font-size: 1.2rem;
     font-weight: 500;
     transition: background-color 0.3s ease;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .btn-servicios {
@@ -143,7 +130,7 @@ a:hover {
 
 .sobre-nosotros p {
     font-size: 1.2rem;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
     text-align: justify;
 }
