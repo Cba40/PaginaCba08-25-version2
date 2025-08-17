@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBA 4.0 - Desarrollo Web</title>
+    <link rel="icon" href="../imagenes/logo.webp">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .container { max-width: 800px; margin: auto; text-align: center; }
+        h1 { color: #1B9AAA; }
+        a.boton-volver { 
+            display: inline-block; 
+            margin-top: 20px; 
+            text-decoration: none; 
+            background: #1B9AAA; 
+            color: white; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+        }
+        a.boton-volver:hover { background: #178f92; }
+    </style>
+</head>
+<body>
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/5493525623637" 
+       class="btn-wsp" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chatear por WhatsApp">
+        <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- Aquí se inyecta el header -->
+    <header id="header-container"></header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <h1>Desarrollo Web</h1>
+        <p>
+          Ofrecemos soluciones de desarrollo web personalizadas, modernas y adaptadas a las necesidades de tu negocio. 
+          Creamos páginas responsivas, rápidas y optimizadas para mejorar tu presencia digital y atraer más clientes.
+        </p>
+        <a href="../index.html" class="boton-volver">⬅ Volver al Inicio</a>
+    </main>
+
+    <!-- Aquí se inyecta el footer -->
+    <footer id="footer-container"></footer>
+
+    <!-- Script de inyecciones -->
+    <script src="../inyecciones.js"></script>
+</body>
+</html>

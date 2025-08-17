@@ -1,6 +1,6 @@
 window.onload = function() {
     // Cargar header
-    fetch('plantillas/header.html')
+    fetch('/plantillas/header.html')
         .then(response => {
             if (!response.ok) throw new Error('Error en la carga del header');
             return response.text();
@@ -44,7 +44,7 @@ window.onload = function() {
             });
 
             // Cargar footer
-            return fetch('plantillas/footer.html');
+            return fetch('/plantillas/footer.html');
         })
         .then(response => {
             if (!response.ok) throw new Error('Error en la carga del footer');
