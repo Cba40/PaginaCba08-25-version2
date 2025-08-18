@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  box-shadow: 0 2px 12px rgba(0,123,255,0.4);
+  box-shadow: 0 1px 12px rgba(15,41,72,1);
   height: 70px;
 }
 
@@ -43,6 +43,14 @@ html, body {
 .logo-container {
   display: flex;
   align-items: center;
+}
+
+.logo-container:hover {
+    transform: scale(1.1); /* efecto de agrandado al pasar el mouse */
+}
+
+.logo-subtitle {
+    color: #007bff
 }
 
 /* Íconos sociales */
