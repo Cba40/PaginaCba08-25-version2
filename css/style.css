@@ -287,29 +287,40 @@ a {
 }
 
 /* Sección Portafolio - MEJORADA */
+.portfolio {
+    width: 90%;
+    margin: 0 auto; 
+    text-align: center; 
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
 .portfolio h2 {
     font-size: 3rem;
     margin-bottom: 40px;
     font-weight: bold;
     color: #0F2948;
-    text-align: center;
 }
 
 .portfolio-row-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     position: relative;
-    width: 100%;
+    padding: 0 70px;
 }
 
 .portfolio-row {
     display: flex;
-    gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 10px 0;
+    gap: 1rem;
+    scrollbar-width: none;
 }
 
 .portfolio-row::-webkit-scrollbar {
-    height: 8px;
+    height: none;
 }
 
 .portfolio-row::-webkit-scrollbar-thumb {
@@ -319,8 +330,8 @@ a {
 
 /* Tarjetas iguales */
 .portfolio-card {
-    flex: 0 0 320px; /* ancho fijo */
-    height: 420px;   /* altura uniforme */
+    flex: 0 0 280px; /* ancho fijo */
+    height: 380px;   /* altura uniforme */
     background: #fff;
     border: 2px solid #1B9AAA;
     border-radius: 15px;
@@ -335,9 +346,18 @@ a {
 }
 
 .portfolio-card:hover {
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-8px) scale(1.01);
     box-shadow: 0 8px 25px rgba(27, 154, 170, 0.3);
     border-color: #0F2948;
+}
+
+.portfolio-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-card p {
+    text-align: justify;
+    margin-top: 0.5rem;
 }
 
 /* Imagenes dentro de las tarjetas */
@@ -346,18 +366,14 @@ a {
     height: 180px;
     overflow: hidden;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0.75rem;
 }
 
 .image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
-}
-
-.portfolio-card:hover img {
-    transform: scale(1.05);
 }
 
 /* Botones del carrusel */
@@ -379,163 +395,8 @@ a {
     background-color: #0F2948;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
-
-
-/*.portfolio {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.portfolio h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: bold;
-    color: #0f172a;
-}
-
-/* Contenedor principal del portafolio 
-.portfolio-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-/* Fila contenedora 
-.portfolio-row {
-    display: grid;
-    gap: 30px;
-    justify-content: center;
-}
-
-/* Configuración específica para cada fila 
-.fila-1, .fila-3 {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    max-width: 100%;
-}
-
-.fila-2 {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-/* Tarjeta base del portafolio 
-.portfolio-card {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #1B9AAA;
-    border-radius: 15px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(27, 154, 170, 0.15);
-    background-color: #fff;
-    text-align: left;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    height: fit-content;
-    min-height: 380px;
-}
-
-/* Efecto hover para las tarjetas 
-.portfolio-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(27, 154, 170, 0.3);
-    border-color: #0F2948;
-}
-
-/* Contenedor de imagen mejorado 
-.image-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #f8f9fa;
-}
-
-/* Imágenes del portafolio 
-.portfolio-card img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-card:hover img {
-    transform: scale(1.05);
-}
-
-/* Configuración específica para tarjetas horizontales 
-.portfolio-card.horizontal .image-wrapper {
-    height: 180px;
-}
-
-.portfolio-card.horizontal img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.portfolio-card.horizontal {
-    min-height: 420px;
-}
-
-/* Configuración específica para tarjetas verticales 
-.portfolio-card.vertical .image-wrapper {
-    height: 200px;
-    max-width: 180px;
-    margin: 0 auto 1rem auto;
-}
-
-.portfolio-card.vertical img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.portfolio-card.vertical {
-    min-height: 450px;
-    text-align: center;
-}
-
-/* Títulos de las tarjetas 
-.portfolio-card h3 {
-    font-size: 1.3rem;
-    color: #0F2948;
-    margin: 0 0 0.8rem 0;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    text-align: center;
-}
-
-.portfolio-card:hover h3 {
-    color: #1B9AAA;
-}
-
-/* Párrafos de las tarjetas 
-.portfolio-card p {
-    font-size: 0.95rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 0.8rem;
-}
-
-.portfolio-card p:last-child {
-    margin-bottom: 0;
-}
-
-/* Strong dentro de párrafos 
-.portfolio-card p strong {
-    color: #0F2948;
-    font-weight: 600;
-}*/
+.prev { left: 1rem; }
+.next { right: 1rem; }
 
 /*icono wsp flotante*/
 .btn-wsp {
