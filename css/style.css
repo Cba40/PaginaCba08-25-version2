@@ -458,6 +458,16 @@ a {
         font-size: 0.9rem;
     }
 
+
+
+    .servicio .descripcion {
+    font-size: 1rem;
+    color: #0F2948;
+    font-weight: 500;
+    margin: 0.8rem 0 1rem 0;
+    }
+
+
     /* Portafolio responsive */
     .portfolio-container {
         gap: 30px;
