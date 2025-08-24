@@ -209,17 +209,26 @@ a {
     color: #0F2948;
 }
 
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Contenedor del carrusel de servicios */
+.servicios-row-wrapper {
+    overflow: hidden;
+    padding: 0 60px; /* Espacio lateral para los botones */
+    position: relative;
 }
 
+/* Fila de tarjetas de servicios */
+.servicios-row {
+    display: flex;
+    gap: 16px; /* Espaciado entre tarjetas */
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+/* Tarjetas de servicios */
 .servicio {
+    flex: 0 0 280px; /* Ancho fijo de las tarjetas */
+    height: auto;
     background: #fff;
-    padding: 20px;
     border: 2px solid #1B9AAA;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(27, 154, 170, 0.15);
@@ -227,14 +236,14 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 15px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-/* Efecto hover para servicios */
 .servicio:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(27, 154, 170, 0.3);
+    transform: scale(1.03); /* Efecto de agrandamiento */
+    box-shadow: 0 8px 25px rgba(27, 154, 170, 0.3); /* Sombra más intensa */
     border-color: #0F2948;
 }
 
