@@ -16,13 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function moveRow() {
-            const visibleWidth = row.parentElement.offsetWidth - 120; // Restar el padding lateral (60px por lado)
-            const totalWidth = cards.length * (cards[0].offsetWidth + gap) - gap;
-            const maxOffset = Math.max(0, totalWidth - visibleWidth);
+             const style = getComputedStyle(row.parentElement);
+             const paddingLeft = parseInt(style.paddingLeft) || 0;
+             const paddingRight = parseInt(style.paddingRight) || 0;
 
-            row.style.transform = `translateX(${-Math.min(index * (cards[0].offsetWidth + gap), maxOffset)}px)`;
-            updateButtons();
-        }
+             const visibleWidth = row.parentElement.offsetWidth - (paddingLeft + paddingRight);
+             const totalWidth = cards.length * (cards[0].offsetWidth + gap) - gap;
+             const maxOffset = Math.max(0, totalWidth - visibleWidth);
+
+    row.style.transform = `translateX(${-Math.min(index * (cards[0].offsetWidth + gap), maxOffset)}px)`;
+    updateButtons();
+}
+
 
         next.addEventListener('click', () => {
             const visibleCards = Math.floor(row.parentElement.offsetWidth / (cards[0].offsetWidth + gap));
