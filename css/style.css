@@ -209,13 +209,6 @@ a {
     color: #0F2948;
 }
 
-/* Contenedor del carrusel de servicios */
-.servicios-row-wrapper {
-    overflow: hidden;
-    padding: 0 60px; /* Espacio lateral para los botones */
-    position: relative;
-}
-
 /* Fila de tarjetas de servicios */
 .servicios-row {
     display: flex;
@@ -312,7 +305,7 @@ a {
     color: #0F2948;
 }
 
-.portfolio-row-wrapper {
+.portfolio-row-wrapper, .servicios-row-wrapper{
     overflow: hidden; /* evita que la última card se corte */
     padding: 0 60px; /* espacio lateral para los botones */
     position: relative;

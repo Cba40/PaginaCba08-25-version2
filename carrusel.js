@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function updateButtons() {
             const visibleCards = Math.floor(row.parentElement.offsetWidth / (cards[0].offsetWidth + gap));
+            
             prev.disabled = index === 0;
             next.disabled = index >= cards.length - visibleCards;
         }
@@ -19,8 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const visibleWidth = row.parentElement.offsetWidth - 120; // Restar el padding lateral (60px por lado)
             const totalWidth = cards.length * (cards[0].offsetWidth + gap) - gap;
             const maxOffset = Math.max(0, totalWidth - visibleWidth);
-
-            row.style.transform = `translateX(${-Math.min(index * (cards[0].offsetWidth + gap), maxOffset)}px)`;
+            
+            // Si hay menos tarjetas que las visibles, ajusta el desplazamiento
+            if (cards.length <= Math.floor(visibleWidth / (cards[0].offsetWidth + gap))) {
+                row.style.transform = 'translateX(0)';
+            } else {
+                row.style.transform = `translateX(${-Math.min(index * (cards[0].offsetWidth + gap), maxOffset)}px)`;
+            }
+            
             updateButtons();
         }
 
