@@ -215,7 +215,7 @@ a {
 
 /* Contenedor del carrusel de servicios */
 .servicios-row-wrapper {
-    overflow: hidden;
+    overflow: visible;
     padding: 0 60px; /* Espacio lateral para los botones */
     box-sizing: border-box;
     position: relative;
@@ -383,7 +383,7 @@ a {
 .image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
