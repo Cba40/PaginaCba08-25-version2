@@ -12,11 +12,9 @@ html {
 body {
   width: 100vw;
   min-height: 100vh;
-  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #f9f9f9;
   color: #000000;
-  margin: 0;
-  padding: 0;
 }
 
 /* Estilos para enlaces */
@@ -56,7 +54,6 @@ a {
     font-size: 5vw;
     color: #0F2948;
     margin-bottom: 0.25rem;
-    font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
@@ -65,14 +62,12 @@ a {
     font-weight: 600;
     color: #1B9AAA;
     margin-bottom: 1rem;
-    font-family: 'Inter', sans-serif;
 }
 
 .izquierda p {
     font-size: 1.4vw;
     line-height: 1.6;
     margin-bottom: 0.25rem;
-    font-family: 'Inter', sans-serif;
 }
 
 .parrafoSecundario {
@@ -197,7 +192,7 @@ a {
 
 /* Sección Servicios */
 .servicios {
-     width: 90%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
     padding: 2rem 0;
@@ -225,7 +220,7 @@ a {
 .servicios-row {
     display: flex;
     gap: 16px; /* Espaciado entre tarjetas */
-    transition: transform 0.5s ease;
+    transition: transform 1.2s ease-in-out;
     will-change: transform;
 }
 
@@ -327,7 +322,7 @@ a {
     display: flex;
     gap: 16px; /* separacion entre cards */
     padding: 8px 0; /* Espacio interno para evitar que el borde se corte */
-    transition: transform 0.5s ease;
+    transition: transform 1.2s ease-in-out;
     will-change: transform;
 }
 
@@ -367,7 +362,7 @@ a {
 }
 
 .portfolio-card p {
-    text-align: justify;
+    text-align: left;
     margin-top: 0.5rem;
 }
 
@@ -416,6 +411,51 @@ a {
 .carousel-btn.next {
     right: 10px; /* Espaciado uniforme desde el borde derecho */
 }
+
+/* Para centrar los 3 visibles */
+.servicios-row,
+.portfolio-row {
+  justify-content: center;   /* centra las 3 tarjetas */
+}
+
+/* Estado base de una card (oculta) */
+.servicio,
+.portfolio-card {
+  opacity: 0;
+  transform: translateX(0) scale(0.95);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  display: none;
+}
+
+/* Cuando la card está visible */
+.servicio.visible,
+.portfolio-card.visible {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Animaciones de entrada/salida */
+.slide-in-right { 
+  transform: translateX(50px) scale(0.95); 
+  opacity: 0; 
+}
+
+.slide-in-left { 
+  transform: translateX(-50px) scale(0.95); 
+  opacity: 0; 
+}
+
+.slide-out-right { 
+  transform: translateX(50px) scale(0.95); 
+  opacity: 0; 
+}
+.slide-out-left { 
+  transform: translateX(-50px) scale(0.95); 
+  opacity: 0; 
+}
+
 
 /*icono wsp flotante*/
 .btn-wsp {
@@ -586,6 +626,3 @@ a {
     }
 }
 
-.home {
-    margin-top: 80px;
-}
