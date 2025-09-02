@@ -111,11 +111,18 @@
 }
 
 .footer-services a {
-    color: #cbd5e1;
+    color: #cbd5e1;                 /* color normal (gris claro) */
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
 }
+
+.footer-services a:hover {
+    color: #1B9AAA;                 /* cambia el color al turquesa */
+    transform: translateX(5px);     /* se desplaza 5px hacia la derecha */
+    text-decoration: none;
+}
+
 .footer-links a {
     color: #cbd5e1;
     text-decoration: none;
