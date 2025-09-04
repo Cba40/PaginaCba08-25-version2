@@ -173,3 +173,75 @@ html, body {
     padding-top: 100px; /* más espacio si el header crece */
   }
 }
+
+/* Menú hamburguesa en móvil */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  /* Animación opcional para links */
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Animación del botón hamburguesa (3 líneas en X) */
+  .hamburger.toggle .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .hamburger.toggle .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.toggle .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+/* Botón hamburguesa (líneas visibles) */
+.hamburger {
+  display: none; /* oculto en escritorio */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  z-index: 1100; /* que quede arriba del menú */
+}
+
+/* Las 3 líneas */
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #0F2948; /* color del menú */
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
