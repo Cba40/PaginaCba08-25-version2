@@ -8,9 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = wrapper.querySelector(".carousel-btn.next");
 
     let startIndex = 0;
-    const visible = 3;
+
+    function getVisible() {
+      if (window.innerWidth <= 480) return 1;       // Móvil
+      if (window.innerWidth <= 768) return 2;       // Tablet
+      return 3;                                     // Desktop
+    }
 
     function render(direction) {
+      const visible = getVisible();
+
       items.forEach(item => {
         item.classList.remove("visible", "slide-in-left", "slide-in-right", "slide-out-left", "slide-out-right");
         item.style.display = "none";
@@ -34,16 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     nextBtn.addEventListener("click", () => {
+      const visible = getVisible();
       if (startIndex < items.length - visible) startIndex++;
       else startIndex = 0;
       render("next");
     });
 
     prevBtn.addEventListener("click", () => {
+      const visible = getVisible();
       if (startIndex > 0) startIndex--;
       else startIndex = items.length - visible;
       render("prev");
     });
+
+    window.addEventListener("resize", () => render()); // Re-render al cambiar tamaño
 
     render(); // inicial
   });

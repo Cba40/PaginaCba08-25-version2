@@ -156,7 +156,6 @@
     height: 20px;
     flex-shrink: 0;
     filter: brightness(0) saturate(100%) invert(65%) sepia(25%) saturate(558%) hue-rotate(160deg) brightness(95%) contrast(90%);
-    margin-top: 2px;
 }
 
 .contact-details {
