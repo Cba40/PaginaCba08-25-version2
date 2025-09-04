@@ -263,6 +263,10 @@
     .footer-brand {
         grid-column: 1 / -1;
     }
+
+    .contact-info{
+        align-items: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -291,6 +295,10 @@
     .legal-links {
         justify-content: center;
     }
+
+    .contact-info{
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -314,5 +322,9 @@
     .legal-links {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .contact-info{
+        align-items: center;
     }
 }
